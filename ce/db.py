@@ -6,21 +6,21 @@ from sklearn.linear_model import LinearRegression
 
 ##### VARIABLES ########
 
-conn = psycopg2.connect(database="booking1685151146470mztpglwhzpempjtf",
-                        host="psql-mock-database-cloud.postgres.database.azure.com",
-                        user="mfhgjloqpkwpbbykjvoiugqi@psql-mock-database-cloud",
-                        password="ofqzqndtxuhprdaspfwfxgvr",
+conn = psycopg2.connect(database="efficiency",
+                        host="currencyefficiency.media.mit.edu",
+                        user="ryoungbl",
+                        password="J0w3kh0flasS33K",
                         port="5432")
 
 
 cursor = conn.cursor()
 
-tableName = "bookings"
+tableName = "export"
 
 postgreSQL_select_Query = ("select * from " + tableName)
 
 cursor.execute(postgreSQL_select_Query)
-print("Selecting rows from X table using cursor.fetchall")
+print("Selecting rows from export table using cursor.fetchall")
 x_records = cursor.fetchall()
 
 #print("Print each row and it's columns values")
